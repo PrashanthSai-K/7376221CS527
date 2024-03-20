@@ -36,8 +36,8 @@ function Home() {
     console.log(options);
     return (
         <>
-            <div className='p-6 flex justify-between gap-3 items-center flex-wrap'>
-                <div className='text-3xl font-semibold '> Top Products </div>
+            <div className='p-6 flex justify-between gap-3 items-center flex-wrap border m-3 rounded-3xl shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]'>
+                <div className='text-3xl font-semibold '> Top <span className=' text-red-600'>"</span >N<span className=' text-red-600'>"</span>Products </div>
                 <div> Get top "N" products  of your need</div>
             </div>
             <div className='pl-6 pt-2'>
@@ -79,7 +79,7 @@ function Home() {
                 <center><button onClick={handleRender} className='  text-center border border-black hover:bg-black hover:text-white p-2 rounded-xl'>Get Products</button></center>
             </div>
             {
-                <div className='flex flex-wrap gap-5 items-center justify-center'>
+                <div className='flex flex-wrap gap-5 items-center justify-center pt-3 pb-3'>
                     <Card show={show} company={options.company} category={options.category} n={options.n} min={options.min} max={options.max} />
                 </div>
             }

@@ -40,10 +40,6 @@ async function getProducts(company, category, n, min, max){
     return res;
 }
 
-// fetch();
-// getSession();
-// getProducts("AMZ", "Phone", "10", "1", "1000");
-
 app.get("/getProducts/:company/:category/:n/:min/:max",async(req, res)=>{
     const company = req.params.company;
     const category = req.params.category;
@@ -57,8 +53,6 @@ app.get("/getProducts/:company/:category/:n/:min/:max",async(req, res)=>{
     res.status(200).json({data:result.data})
 
 })
-
-// console.log((String)(10));
 
 app.listen(4000, ()=>console.log("Server running on 4000"));
 
